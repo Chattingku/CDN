@@ -36,6 +36,7 @@ var sendMessage = function (ev) {
     ev.preventDefault();
     var msg = $('#message').val();
     chattingHub.invoke('Send', __lc.license, name, msg, new Date());
+    newMessage({ UserName: name, Message: msg });
     $('#message').val('').focus();
 };
 
