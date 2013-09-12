@@ -4,14 +4,13 @@ var name = "";
 var email = "";
 
 var loadScriptHub = function () {
+    var lc_2 = document.createElement('script'); lc_2.type = 'text/javascript'; lc_2.async = true;
+    lc_2.src = 'http://' + urlCDNChattingKu + '/Scripts/jquery.signalR-1.1.3.min.js';
+    var s_2 = document.getElementsByTagName('script')[0]; s_2.parentNode.insertBefore(lc_2, s_2);
 
     var lc_1 = document.createElement('script'); lc_1.type = 'text/javascript'; lc_1.async = true;
     lc_1.src = 'http://' + urlCDNChattingKu + '/signalr/hubs';
     var s_1 = document.getElementsByTagName('script')[0]; s_1.parentNode.insertBefore(lc_1, s_1);
-
-    var lc_2 = document.createElement('script'); lc_2.type = 'text/javascript'; lc_2.async = true;
-    lc_2.src = 'http://' + urlCDNChattingKu + '/Scripts/jquery.signalR-1.1.3.min.js';
-    var s_2 = document.getElementsByTagName('script')[0]; s_2.parentNode.insertBefore(lc_2, s_2);
 };
 
 var connectingToHub = function () {
