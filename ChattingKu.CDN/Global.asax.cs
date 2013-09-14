@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Microsoft.AspNet.SignalR;
+using System.Web.Optimization;
 
 namespace ChattingKu.CDN
 {
@@ -37,6 +38,7 @@ namespace ChattingKu.CDN
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }

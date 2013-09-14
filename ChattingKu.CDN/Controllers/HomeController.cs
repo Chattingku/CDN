@@ -6,15 +6,12 @@ using System.Web.Mvc;
 
 namespace ChattingKu.CDN.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
-        //
-        // GET: /Home/
-
         public ActionResult Index()
         {
             return View();
         }
-
     }
 }
